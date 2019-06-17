@@ -1,6 +1,6 @@
 {
   "name": "sort-word",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "根据首拼音排序，获取数组，可用于城市筛选，用户筛选等",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/zhangJQ4219/sort-word"
   },
   "keywords": [
     "pinyin",
