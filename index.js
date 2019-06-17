@@ -1,10 +1,12 @@
 let pinyin_to_word = require('./base.js')
 module.exports =  class SortWord{
-  constructor(list, name) {
+  constructor(list, name, hot = false) {
     this.newList = []
-    this.change(list, name)
+    this.indexList = []
+    this.total = 0
+    this.change(list, name, hot)
   }
-  change(list, name){
+  change(list, name, hot){
     list.forEach((item, index) => {
       let hasWord = 0
       for(let key in pinyin_to_word) {
@@ -69,6 +71,16 @@ module.exports =  class SortWord{
       this.newList.shift()
       this.newList.push(other)
     }
+    if(hot) {
+      this.newList.unshift({
+        title: '热',
+        list: list.slice(0, 10)
+      })
+    }
+    this.newList.forEach(item => {
+      this.indexList.push(item.title)
+      this.total++
+    })
   }
   sameKey (arr, val) {
     let state = false

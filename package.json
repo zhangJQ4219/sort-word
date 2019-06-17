@@ -1,6 +1,6 @@
 {
   "name": "sort-word",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "根据首拼音排序，获取数组，可用于城市筛选，用户筛选等",
   "main": "index.js",
   "scripts": {
